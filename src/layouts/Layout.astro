@@ -31,36 +31,3 @@ import.meta.env.SITE;
   </body>
 </html>
 
-<script>
-  function myFunction() {
-    window.location = `${import.meta.env.SITE}/level/${level}`;
-    document.getElementById("myButton").disabled = false;
-  }
-  var exactLocation = [];
-  const location = window.location.href;
-  exactLocation = location.split("/");
-  const level = localStorage.getItem("levelNo");
-  if (Number(exactLocation[4]) > Number(level)) {
-    document.getElementById("myButton").disabled = true;
-
-    var hasExecuted = false;
-    document.body.onkeyup = function (e) {
-      if (
-        (e.key === " " || e.code === "Space" || e.keyCode === 32) &&
-        !hasExecuted
-      ) {
-        // typing_ground.removeAttribute("disabled");
-        document.getElementById("typing_ground").disabled = true;
-        hasExecuted = true;
-      }
-    };
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-    setInterval(() => {
-      myFunction();
-    }, 5000);
-  }
-</script>
-<!-- <style is:global>
-	
-</style> -->
