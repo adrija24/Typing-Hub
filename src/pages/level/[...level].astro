@@ -17,7 +17,7 @@ const {
   speed,
   finalAccuracy,
   length = levelData.length,
-  response = paragraph(Math.round(Math.random() * (8 - 5) + 5)),
+  response = paragraph(Math.round(Math.random() * (5 - 3) + 3)),
 } = Astro.props;
 ---
 
@@ -97,6 +97,7 @@ const {
     </button>
   </div>
 </Layout>
+
 <script>
   const typing_ground = document.querySelector("#textInput");
   const btn = document.querySelector("#myButton");
